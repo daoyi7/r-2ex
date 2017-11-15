@@ -5,13 +5,19 @@ import axios from 'axios'
 
 export default class App extends Component {
 
+  state = {
+    data: []
+  }
+
   componentDidMount() {
     axios({
       method: 'get',
       url: 'https://www.v2ex.com/api/topics/latest.json',
     })
     .then((res) => {
-      console.log(res)
+      this.setState({
+        data: res.data
+      })
     })
     .catch((err) => {
       console.log(err)
@@ -22,7 +28,7 @@ export default class App extends Component {
     return (
       <div className="r2ex">
         <Header />
-        <List />
+        <List data = {this.state.data}/>
       </div>
     )
   }
