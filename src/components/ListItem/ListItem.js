@@ -1,7 +1,12 @@
 import React, {Component} from 'react'
-// import moment from 'moment'
+import moment from 'moment'
 
 export default class ListItem extends Component {
+
+  componentDidMount() {
+    console.log(moment.unix(1510666557).format())
+  }
+
   render() {
     const list = this.props.list
 
@@ -13,11 +18,18 @@ export default class ListItem extends Component {
         <div className="list">
           <div className="node">
             <span className="nodename">{list.node.title}</span>
-            <span className="split">·</span>
             <span className="username">{list.member.username}</span>
           </div>
-          <h2 className="title">{list.title}</h2>
+          <h3 className="title">{list.title}</h3>
+          <div className="timebox">
+            <span className="last_modified">
+              {
+                moment(moment.unix(list.last_modified).format()).fromNow()
+              }
+            </span>
+          </div>
         </div>
+        <span className="replies">{list.replies}</span>
       </div>
     )
   }

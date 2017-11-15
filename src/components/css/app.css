@@ -8,6 +8,10 @@ header.header {
   line-height: 4em;
   background: #334;
   text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
 header.header h2 {
@@ -17,20 +21,64 @@ header.header h2 {
   letter-spacing: .2em;
 }
 
+div.listWrap {
+  width: 95%;
+  margin: 4.5em auto 0;
+  background: #fff;
+  border-radius: .5em;
+  padding: .5em;
+}
+
 div.listItems {
   display: flex;
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 1em;
+  position: relative;
 }
 
 div.member {
   flex: 0 0 0 4.8em;
   width: 4.8em;
-  height: 4.8em;
 }
 
-div.listwrap {
-  width: 95%;
-  margin: 1em auto 0;
-  background: #fff;
-  border-radius: .5em;
-  padding: .5em;
+img.avatar {
+  width:4.8em;
+  height: 4.8em;
+  border-radius: .5em
+}
+
+div.list {
+  flex: 1;
+  padding: .3em 0 0 .8em;
+}
+
+span.nodename {
+  padding: .1em .3em;
+  background: #ccc;
+  color: #7b7a7a;
+  vertical-align: middle;
+}
+
+span.username {
+  color: #666;
+  font-weight: 400;
+  margin-left: .5em;
+  vertical-align: middle;
+}
+
+h3.title {
+  width: 90%;
+  font-size: 1.4em;
+  margin: .7em 0;
+}
+span.replies {
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  padding: .3em .5em;
+  margin-top: -1em;
+  color: #fff;
+  border-radius: 50%;
+  background: #b9b8b8;
+  font-weight: 700;
 }
