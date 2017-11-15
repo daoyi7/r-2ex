@@ -14,14 +14,15 @@ export default class App extends Component {
   componentDidMount() {
 
     fetch('/topics/hot.json')
-    .then(function(response) {
-      return response.json()
+    .then(function(res) {
+      console.log(res)
+      return res.json()
     })
     .then(function(json) {
       console.log(json)
     })
-    .catch(function(ex) {
-      console.log(ex)
+    .catch(function(err) {
+      console.log(err)
     })
   }
 
