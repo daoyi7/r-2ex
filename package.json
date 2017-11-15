@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
     "react-scripts": "1.0.17"
   },
   "scripts": {
@@ -12,5 +14,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/api": {
+      "target": "https://www.v2ex.com/api",
+      "ws": true
+    }
   }
 }
