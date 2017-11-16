@@ -42,7 +42,7 @@ div.member {
 }
 
 img.avatar {
-  width:4.8em;
+  width: 4.8em;
   height: 4.8em;
   border-radius: .5em
 }
@@ -71,6 +71,11 @@ h3.title {
   font-size: 1.4em;
   margin: .7em 0;
 }
+
+h3.title a {
+  color: #334;
+}
+
 span.replies {
   position: absolute;
   top: 50%;
