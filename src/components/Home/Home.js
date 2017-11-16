@@ -25,7 +25,7 @@ export default class Hpme extends Component {
 
   render() {
     return (
-      <div className="r2ex">
+      <div className="home main">
         <List data = {this.state.data}/>
       </div>
     )

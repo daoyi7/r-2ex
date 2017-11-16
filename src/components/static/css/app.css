@@ -5,10 +5,10 @@ body {
 div.main {
   width: 95%;
   margin: 4.5em auto 0;
-  border-radius: .5em;
   padding: .5em;
 }
 
 div.listWrap {
   background: #fff;
+  border-radius: .5em;
 }

@@ -7,7 +7,7 @@ export default class List extends Component {
     const lists = this.props.data
     console.log(lists)
     return (
-      <div className="listWrap main">
+      <div className="listWrap">
         {lists.map((list, index) => <ListItem list={list} key={index}/>)}
       </div>
     )
