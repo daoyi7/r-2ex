@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {BrowserRouter, Route, Link} from 'react-router-dom'
+import {BrowserRouter, Route, Link, Switch} from 'react-router-dom'
 import moment from 'moment'
 import Detail from '../Detail/Detail'
 
@@ -20,7 +20,7 @@ export default class ListItem extends Component {
               <span className="username">{list.member.username}</span>
             </div>
             <h3 className="title">
-              <Link to={`/detail/${list.id}`}>{list.title}</Link>
+              <Link to="/detail">{list.title}</Link>
             </h3>
             <div className="timebox">
               <span className="last_modified">
@@ -31,7 +31,6 @@ export default class ListItem extends Component {
             </div>
           </div>
           <span className="replies">{list.replies}</span>
-          <Route path="/detail/:id" component = {Detail}></Route>
         </div>
       </BrowserRouter>
     )

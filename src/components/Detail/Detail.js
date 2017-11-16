@@ -4,7 +4,7 @@ export default class Detail extends Component {
 
   render() {
     return (
-      <h2>Detail</h2>
+      <h2 className="detail11111">Detail</h2>
     )
   }
 }

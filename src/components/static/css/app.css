@@ -20,6 +20,9 @@ header.header h2 {
   text-transform: uppercase;
   letter-spacing: .2em;
 }
+header.header h2 a {
+  color: #fff;
+}
 
 div.listWrap {
   width: 95%;
