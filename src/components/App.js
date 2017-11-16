@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
+import {Route, Switch, Redirect} from 'react-router-dom'
 import Header from './Header/Header'
 import List from './List/List'
+import Detail from './Detail/Detail';
 import axios from 'axios'
 
 export default class App extends Component {
@@ -28,7 +30,12 @@ export default class App extends Component {
     return (
       <div className="r2ex">
         <Header />
-        <List data = {this.state.data}/>
+        <Switch>
+          <Route path = "/home" render={() => <List data = {this.state.data}/>}></Route>
+          <Route path = "/detail" component = {Detail}></Route>
+          <Redirect from = "/" to = "/home" />
+        </Switch>
+
       </div>
     )
   }
