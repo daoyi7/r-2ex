@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import moment from 'moment'
-import '../static/css/list.css';
+import './items.css';
 
 export default class ListItem extends Component {
 

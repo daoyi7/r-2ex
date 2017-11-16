@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
-import '../static/css/detail.css';
+import './detail.css';
 
 export default class Detail extends Component {
 
   state = {
     detailData: Object,
     node: String,
-    avatar: String
+    member: String
   }
 
   componentDidMount() {
@@ -21,7 +21,7 @@ export default class Detail extends Component {
       this.setState({
         detailData: res.data[0],
         node: res.data[0].node,
-        avatar: res.data[0].member
+        member: res.data[0].member
       })
     })
     .catch((err) => {
@@ -32,19 +32,33 @@ export default class Detail extends Component {
   render() {
     const data = this.state.detailData
     const node = this.state.node
-    const avatar = this.state.avatar
+    const member = this.state.member
 
     return (
       <div className="detail main">
         <div className="box">
           <div className="box_header">
             <div className="crumbs">
-              <Link to="/">R2EX</Link><em style = {{margin:'0 .5em'}}>></em><Link to="/">{node.title}</Link>
-              <h2>{data.title}</h2>
-              <img src={avatar.avatar_normal} alt="" />
+              <Link to="/">R2EX</Link><em>&nbsp;›&nbsp;</em><Link to="/">{node.title}</Link>
+            </div>
+            <h1 className="box_title">{data.title}</h1>
+            <img className="box_avatar" src={member.avatar_normal} alt="" />
+            <div className="box_tip">
+              <p>By <span>{member.username}</span> at <span>{data.created}</span>, <span>{data.replies}</span>个回复</p>
             </div>
           </div>
+          <div className="content">
+            <div className="content_main" dangerouslySetInnerHTML={{__html: data.content_rendered}} />
+          </div>
+          <div className="more">
+            <span>加入收藏</span>
+            <span>Tweet</span>
+            <span>Weibo</span>
+            <span>忽略主题</span>
+            <span>感谢</span>
+          </div>
         </div>
+        <div className="replies"></div>
       </div>
     )
   }

@@ -3,12 +3,13 @@ body {
 }
 
 div.main {
-  width: 95%;
+  width: 98%;
   margin: 4.5em auto 0;
-  padding: .5em;
+  border-radius: .5em;
+  overflow: hidden;
 }
 
 div.listWrap {
   background: #fff;
-  border-radius: .5em;
+  border-radius: .3em;
 }
