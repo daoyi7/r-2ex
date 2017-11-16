@@ -6,6 +6,10 @@ div.listItems {
   position: relative;
 }
 
+div.listItems:last-child {
+  border-bottom: none;
+}
+
 div.member {
   flex: 0 0 0 4.8em;
   width: 4.8em;
