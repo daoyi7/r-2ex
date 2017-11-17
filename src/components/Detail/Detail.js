@@ -28,7 +28,7 @@ export default class Detail extends Component {
       })
     })
     .catch((err) => {
-      console.log(err)
+      console.error(err)
     })
 
     axios({
@@ -42,7 +42,7 @@ export default class Detail extends Component {
       })
     })
     .catch((err) => {
-      console.log(err)
+      console.error(err)
     })
   }
 
