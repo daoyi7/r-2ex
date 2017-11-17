@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {BrowserRouter} from 'react-router-dom'
-import './header.css';
+import './header.css'
 
 export default class Header extends Component {
 

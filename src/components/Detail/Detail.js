@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import moment from 'moment'
 import Reply from '../Reply/Reply'
-import './detail.css';
+import './detail.css'
 
 export default class Detail extends Component {
 
@@ -60,7 +60,9 @@ export default class Detail extends Component {
               <Link to="/">R2EX</Link><em>&nbsp;›&nbsp;</em><Link to="/">{node.title}</Link>
             </div>
             <h1 className="box_title">{data.title}</h1>
-            <img className="box_avatar" src={member.avatar_normal} alt="" />
+            <Link to={`/member/${member.username}`}>
+              <img className="box_avatar" src={member.avatar_normal} alt="" />
+            </Link>
             <div className="box_tip">
               <p>By <span>{member.username}</span> at <span>{data.created}</span>, <span>{data.replies}</span>个回复</p>
             </div>

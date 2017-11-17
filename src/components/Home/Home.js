@@ -11,7 +11,7 @@ export default class Hpme extends Component {
   componentDidMount() {
     axios({
       method: 'get',
-      url: 'https://www.v2ex.com/api/topics/latest.json',
+      url: 'https://www.v2ex.com/api/topics/hot.json',
     })
     .then((res) => {
       this.setState({

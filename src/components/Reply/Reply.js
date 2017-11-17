@@ -1,17 +1,19 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import moment from 'moment'
-import './reply.css';
+import './reply.css'
 
 export default class Reply extends Component {
 
   render() {
     const reply = this.props.reply
-    console.log(reply)
 
     return (
       <div className="reply_item">
         <div className="reply_member">
-          <img className="reply_avatar" src={reply.member.avatar_mini} alt="" />
+          <Link to={`/member/${reply.member.username}`}>
+            <img className="reply_avatar" src={reply.member.avatar_mini} alt="" />
+          </Link>
         </div>
         <div className="reply_all">
           <div className="reply_title">

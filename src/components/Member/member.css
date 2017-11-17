@@ -1,0 +1,31 @@
+div.all_of_member_info {
+  width: 100%;
+  border-radius: .3em;
+  background: #fff;
+  margin-bottom: .8em;
+}
+
+div.member_info_box {
+  display: flex;
+  padding: .5em;
+}
+
+div.member_avatar_box {
+  flex: 0 0 0 4.8em;
+  width: 4.8em;
+}
+
+div.member_info_data {
+  flex: 1;
+  padding-left:1.5em;
+}
+
+h1.member_username {
+  margin-bottom: 1.5em;
+}
+
+div.member_created {
+  font-size: 1.3em;
+  letter-spacing: .05em;
+  line-height: 1.5em;
+}

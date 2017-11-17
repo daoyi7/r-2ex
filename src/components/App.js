@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom'
 import Header from './Header/Header'
 import Home from './Home/Home'
 import Detail from './Detail/Detail'
+import Member from './Member/Member'
 
 export default class App extends Component {
 
@@ -14,6 +15,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path = "/home" component={Home}></Route>
             <Route exact path = "/detail/:id" component={Detail}></Route>
+            <Route exact path = "/member/:username" component={Member}></Route>
             <Redirect from = "/" to = "/home" />
           </Switch>
         </BrowserRouter>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import moment from 'moment'
-import './list.css';
+import './list.css'
 
 export default class ListItem extends Component {
 
@@ -11,7 +11,9 @@ export default class ListItem extends Component {
     return (
       <div className="list_item">
         <div className="member">
-          <img className="avatar" src={list.member.avatar_normal} alt="" />
+          <Link to={`/member/${list.member.username}`}>
+            <img className="avatar" src={list.member.avatar_normal} alt="" />
+          </Link>
         </div>
         <div className="list">
           <div className="node">
