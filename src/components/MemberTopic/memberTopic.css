@@ -8,7 +8,7 @@ div.member_topic_box:last-child {
   border-bottom: none;
 }
 
-h3.member_topic_title {
+h3.member_content_title {
   width: 90%;
   font-size: 1.5em;
   font-weight: 500;
@@ -37,17 +37,18 @@ div.member_topic_info span::after {
   background: #ccc;
   border-radius: 50%;
 }
+
 div.member_topic_info span:last-child::after {
   display: none;
 }
 
 span.member_topic_node {
   padding: .2em .4em;
-  color: #999;
   background: #f5f5f5;
 }
 
-span.member_topic_username {
+span.member_topic_node a {
+  color: #999;
 }
 
 span.member_topic_replies {

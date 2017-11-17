@@ -17,7 +17,9 @@ export default class ListItem extends Component {
         </div>
         <div className="list">
           <div className="node">
-            <span className="nodename">{list.node.title}</span>
+            <span className="nodename">
+              <Link to={`/node/${list.node.name}`}>{list.node.title}</Link>
+            </span>
             <span className="username">{list.member.username}</span>
           </div>
           <h3 className="title">

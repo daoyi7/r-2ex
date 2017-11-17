@@ -4,6 +4,7 @@ import Header from './Header/Header'
 import Home from './Home/Home'
 import Detail from './Detail/Detail'
 import Member from './Member/Member'
+import Node from './Node/Node'
 
 export default class App extends Component {
 
@@ -16,6 +17,7 @@ export default class App extends Component {
             <Route exact path = "/home" component={Home}></Route>
             <Route exact path = "/detail/:id" component={Detail}></Route>
             <Route exact path = "/member/:username" component={Member}></Route>
+            <Route exact path = "/node/:nodename" component={Node}></Route>
             <Redirect from = "/" to = "/home" />
           </Switch>
         </BrowserRouter>

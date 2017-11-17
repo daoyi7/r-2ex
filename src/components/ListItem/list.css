@@ -29,8 +29,11 @@ div.list {
 span.nodename {
   padding: .1em .3em;
   background: #ccc;
-  color: #7b7a7a;
   vertical-align: middle;
+}
+
+span.nodename a {
+  color: #7b7a7a;
 }
 
 span.username {

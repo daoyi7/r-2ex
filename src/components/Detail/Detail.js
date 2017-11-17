@@ -20,7 +20,6 @@ export default class Detail extends Component {
       url: 'https://www.v2ex.com/api/topics/show.json?id=' + this.props.match.params.id,
     })
     .then((res) => {
-      console.log(res)
       this.setState({
         detailData: res.data[0],
         node: res.data[0].node,
@@ -36,7 +35,6 @@ export default class Detail extends Component {
       url: 'https://www.v2ex.com/api/replies/show.json?topic_id=' + this.props.match.params.id,
     })
     .then((res) => {
-      console.log(res)
       this.setState({
         replies: res.data,
       })
@@ -57,7 +55,9 @@ export default class Detail extends Component {
         <div className="box">
           <div className="box_header">
             <div className="crumbs">
-              <Link to="/">R2EX</Link><em>&nbsp;›&nbsp;</em><Link to="/">{node.title}</Link>
+              <Link to="/">R2EX</Link>
+              <em>&nbsp;›&nbsp;</em>
+              <Link to={`/node/${node.name}`}>{node.title}</Link>
             </div>
             <h1 className="box_title">{data.title}</h1>
             <Link to={`/member/${member.username}`}>
