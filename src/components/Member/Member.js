@@ -43,7 +43,47 @@ export default class Member extends Component {
                 </p>
               </div>
             </div>
-            <div className="member_webs"></div>
+          </div>
+          <div className="member_webs">
+            {
+              memberData.website
+              ?
+              <span className="website">
+                <i className="icon iconfont icon-website" style={{color: '#39ca38'}}></i>
+                <b>{memberData.website}</b>
+              </span>
+              : null
+            }
+            {
+              memberData.github
+              ?
+              <span className="github">
+                <i className="icon iconfont icon-github"></i>
+                <b>{memberData.github}</b>
+              </span>
+              : null
+            }
+            {
+              memberData.location
+              ?
+              <span className="location">
+                <i className="icon iconfont icon-location"></i>
+                <b>{memberData.location}</b>
+              </span>
+              : null
+            }
+          </div>
+          <div className="member_motto">
+            {
+              memberData.tagline
+              ? <p className="tagline">{memberData.tagline}</p>
+              : null
+            }
+            {
+              memberData.bio
+              ? <p className="bio">{memberData.bio}</p>
+              : null
+            }
           </div>
         </div>
       </div>

@@ -15,9 +15,15 @@ div.member_avatar_box {
   width: 4.8em;
 }
 
+img.info_avatar {
+  width: 4.8em;
+  height: 4.8em;
+  border-radius: .5em;
+}
+
 div.member_info_data {
   flex: 1;
-  padding-left:1.5em;
+  padding-left: 1.5em;
 }
 
 h1.member_username {
@@ -28,4 +34,34 @@ div.member_created {
   font-size: 1.3em;
   letter-spacing: .05em;
   line-height: 1.5em;
+}
+
+div.member_webs {
+  width: 100%;
+  height: 3em;
+  line-height: 3em;
+}
+
+div.member_webs span {
+  padding: .3em .6em;
+  margin: 0 .4em;
+  background: #f3f3f3;
+  border-radius: 1em;
+  font-size: 1.4em;
+}
+
+div.member_webs span i {
+  margin-right: .2em;
+  vertical-align: top;
+}
+
+div.member_webs span b {
+  font-weight: 100;
+  vertical-align: top;
+}
+
+div.member_motto p {
+  line-height: 1.5em;
+  margin: .8em 0;
+  padding: .5em;
 }
