@@ -1,4 +1,4 @@
-div.listItems {
+div.list_item {
   padding: .3em .5em;
   display: flex;
   border-bottom: 1px solid #f7f7f7;
@@ -6,7 +6,7 @@ div.listItems {
   position: relative;
 }
 
-div.listItems:last-child {
+div.list_item:last-child {
   border-bottom: none;
 }
 

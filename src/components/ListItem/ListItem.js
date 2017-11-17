@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import moment from 'moment'
-import './items.css';
+import './list.css';
 
 export default class ListItem extends Component {
 
@@ -9,7 +9,7 @@ export default class ListItem extends Component {
     const list = this.props.list
 
     return (
-      <div className="listItems">
+      <div className="list_item">
         <div className="member">
           <img className="avatar" src={list.member.avatar_normal} alt="" />
         </div>
@@ -26,7 +26,7 @@ export default class ListItem extends Component {
           <div className="timebox">
             <span className="last_modified">
               {
-                moment(moment.unix(list.last_modified).format()).fromNow()
+                  moment(moment.unix(list.last_modified).format()).fromNow()
               }
             </span>
           </div>

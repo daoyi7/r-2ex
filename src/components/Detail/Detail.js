@@ -1,14 +1,17 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
+import moment from 'moment'
+import Reply from '../Reply/Reply'
 import './detail.css';
 
 export default class Detail extends Component {
 
   state = {
-    detailData: Object,
+    detailData: [],
     node: String,
-    member: String
+    member: String,
+    replies: [],
   }
 
   componentDidMount() {
@@ -27,12 +30,27 @@ export default class Detail extends Component {
     .catch((err) => {
       console.log(err)
     })
+
+    axios({
+      method: 'get',
+      url: 'https://www.v2ex.com/api/replies/show.json?topic_id=' + this.props.match.params.id,
+    })
+    .then((res) => {
+      console.log(res)
+      this.setState({
+        replies: res.data,
+      })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
   }
 
   render() {
     const data = this.state.detailData
     const node = this.state.node
     const member = this.state.member
+    const replies = this.state.replies
 
     return (
       <div className="detail main">
@@ -58,7 +76,19 @@ export default class Detail extends Component {
             <span>感谢</span>
           </div>
         </div>
-        <div className="replies"></div>
+        <div className="replies">
+          <div className="all_of_replies">
+            <span>{data.replies}个回复</span>
+            <span>直到
+              {
+                moment.unix(data.last_touched).format('MMMM Do YYYY, h:mm:ss a')
+              }
+            </span>
+          </div>
+          {
+            replies.map((reply, index) => <Reply key={index} reply={reply} index={index} />)
+          }
+        </div>
       </div>
     )
   }
