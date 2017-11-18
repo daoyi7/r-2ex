@@ -7,18 +7,18 @@ react + v2ex-api
 ## Home
 
 ![Home](https://github.com/daoyi7/r-2ex/blob/master/img/home.png)
-![Detail](https://github.com/daoyi7/r-2ex/blob/master/img/deail.png)
-![Node](https://github.com/daoyi7/r-2ex/blob/master/img/uerlist.png)
+![Detail](https://github.com/daoyi7/r-2ex/blob/master/img/detail.png)
+![Node](https://github.com/daoyi7/r-2ex/blob/master/img/nodelist.png)
 ![User](https://github.com/daoyi7/r-2ex/blob/master/img/uerpage.png)
 
 ## Detail
 
-![Detail](https://github.com/daoyi7/r-2ex/blob/master/img/deail.png)
+![Detail](https://github.com/daoyi7/r-2ex/blob/master/img/detail.png)
 
 ## Node
 
-![Node](https://github.com/daoyi7/r-2ex/blob/master/img/uerlist.png)
+![Node](https://github.com/daoyi7/r-2ex/blob/master/img/nodelist.png)
 
 ## User
 
-![User](https://github.com/daoyi7/r-2ex/blob/master/img/uerpage.png)
+![User](https://github.com/daoyi7/r-2ex/blob/master/img/userpage.png)
