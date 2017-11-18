@@ -2,4 +2,8 @@
 
 react + v2ex-api
 
-[https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development)
+`react` + `react-router-v4` + `react-redux` + `axios`
+
+## Home
+
+![Home](https://github.com/daoyi7/r-2ex/blob/master/img/home.png)
